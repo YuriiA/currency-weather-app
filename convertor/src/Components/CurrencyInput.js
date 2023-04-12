@@ -1,9 +1,14 @@
-export default function CurrencyInput() {
+export default function CurrencyInput(props) {
+  const { currencySymbol, selectedCurrency } = props;
   return (
     <div>
       <input type="number" />
-      <select>
-        <option value="sfas">hi</option>
+      <select value={selectedCurrency}>
+        {currencySymbol.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );

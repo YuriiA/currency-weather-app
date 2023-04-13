@@ -1,3 +1,5 @@
+import shortid from "shortid";
+
 export default function CurrencyInput(props) {
   const {
     currencySymbol,
@@ -11,7 +13,7 @@ export default function CurrencyInput(props) {
       <input type="number" value={amount} onChange={changedAmount} />
       <select value={selectedCurrency} onChange={changedCurrency}>
         {currencySymbol.map((option) => (
-          <option key={option} value={option}>
+          <option key={shortid.generate()} value={option}>
             {option}
           </option>
         ))}

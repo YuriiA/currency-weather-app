@@ -32,6 +32,16 @@ export default function Convertor() {
       });
   }, []);
 
+  useEffect(() => {
+    if (currencyToConvert != null && convertedCurrency != null) {
+      fetch(
+        `${BASE_URL}?base=${currencyToConvert}&symbols=${convertedCurrency}`
+      )
+        .then((res) => res.json())
+        .then((data) => setRate(data.rates[convertedCurrency]));
+    }
+  }, [currencyToConvert, convertedCurrency]);
+
   function handleFromChangedAmount(e) {
     setAmount(e.target.value);
     setToInput(true);

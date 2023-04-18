@@ -5,14 +5,16 @@
 }
 
 .convertor {
+  min-height: 100vh;
+
+  background-image: url("./assets/convertor-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  transition: 0.4s ease;
   text-align: center;
-  background-color: rgba(128, 128, 128, 0.7);
   color: white;
-  width: 60%;
-  margin-top: 15%;
-  margin-left: 20%;
   padding: 0.5rem;
-  border-radius: 15px;
 }
 
 input,
@@ -25,9 +27,12 @@ select {
 }
 
 body {
+  background-color: rgba(160, 158, 158, 0.82);
+}
+.weather-component {
   min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  background-image: url("./assets/bg.jpeg");
+  padding: 0.5rem;
+  background-image: url("./assets/weather-bg.jpeg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -35,7 +40,8 @@ body {
 }
 
 .app {
-  margin: 10px auto;
+  margin: 0px auto;
+  padding-top: 0.5rem;
   border-radius: 30px;
 
   width: 50%;

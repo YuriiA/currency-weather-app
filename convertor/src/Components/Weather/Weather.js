@@ -48,12 +48,12 @@ export function Weather() {
           setCity("");
         });
     } catch (err) {
-      console.alert("Please enter a valid city name");
+      console.error(err);
     }
   }
 
   return (
-    <>
+    <div className="weather-component">
       <div
         className={userLocationWeather.main?.temp < 288 ? " app " : "app warm"}
       >
@@ -138,6 +138,6 @@ export function Weather() {
           )}
         </main>
       </div>
-    </>
+    </div>
   );
 }

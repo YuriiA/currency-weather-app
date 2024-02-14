@@ -1,5 +1,5 @@
 Single-page weather application made with ReactJS and vanilla CSS
-Live page: https://grand-kringle-f0e1d9.netlify.app
+Live page: [https://grand-kringle-f0e1d9.netlify.app](https://random88.netlify.app)
 
 # Navbar
 
